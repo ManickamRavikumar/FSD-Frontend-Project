@@ -8,10 +8,6 @@ import MobileApp from "../components/MobileApp";
 import Footer from "../components/Footer";
 
 
-
-
-
-
 const Home = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
