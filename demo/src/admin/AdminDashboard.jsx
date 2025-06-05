@@ -25,10 +25,10 @@ const AdminDashboard = () => {
     }
 
     Promise.all([
-      axios.get("http://localhost:5000/api/products", {
+      axios.get("https://fsd-backend-project-1-n8fd.onrender.com/api/products", {
         headers: { Authorization: `Bearer ${user.token}` },
       }),
-      axios.get("http://localhost:5000/api/orders", {
+      axios.get("https://fsd-backend-project-1-n8fd.onrender.com/api/orders", {
         headers: { Authorization: `Bearer ${user.token}` },
       }),
     ])
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   const handleAddProduct = () => {
     axios
       .post(
-        "http://localhost:5000/api/products/create",
+        "https://fsd-backend-project-1-n8fd.onrender.com/api/products/create",
         newProduct,
         {
           headers: { Authorization: `Bearer ${user.token}` },
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
   const handleUpdateProduct = () => {
     axios
       .put(
-        `http://localhost:5000/api/products/update/${editId}`,
+        `https://fsd-backend-project-1-n8fd.onrender.com/api/products/update/${editId}`,
         newProduct,
         {
           headers: { Authorization: `Bearer ${user.token}` },
@@ -95,7 +95,7 @@ const AdminDashboard = () => {
     if (confirm("Are you sure you want to delete this product?")) {
       axios
         .delete(
-          `http://localhost:5000/api/products/delete/${id}`,
+          `https://fsd-backend-project-1-n8fd.onrender.com/api/products/delete/${id}`,
           {
             headers: { Authorization: `Bearer ${user.token}` },
           }
@@ -112,7 +112,7 @@ const AdminDashboard = () => {
   const handleStatusChange = (orderId, newStatus) => {
     axios
       .put(
-        `http://localhost:5000/api/orders/update/${orderId}`,
+        `https://fsd-backend-project-1-n8fd.onrender.com/api/orders/update/${orderId}`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${user.token}` },
