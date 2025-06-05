@@ -18,7 +18,7 @@ const Order = () => {
     }
 
     axios
-      .get("http://localhost:5000/api/orders/my-orders", {
+      .get("https://fsd-backend-project-1-n8fd.onrender.com/api/orders/my-orders", {
         headers: { Authorization: `Bearer ${user.token}` },
       })
       .then((res) => {
