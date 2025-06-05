@@ -50,7 +50,7 @@ const Order = () => {
 
     axios
       .post(
-        "http://localhost:5000/api/payment/checkout",
+        "https://fsd-backend-project-1-n8fd.onrender.com/api/payment/checkout",
         { items: allItems, amount: totalAmount },
         {
           headers: { Authorization: `Bearer ${user.token}` },

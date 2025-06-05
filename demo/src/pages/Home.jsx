@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch Products
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://fsd-backend-project-1-n8fd.onrender.com/api/products")
       .then((res) => {
         console.log("Products fetched:", res.data.data.items);
         setProducts(res.data.data || [])
@@ -40,7 +40,7 @@ const Home = () => {
       }
 
       axios
-        .get("http://localhost:5000/api/cart/view", {
+        .get("https://fsd-backend-project-1-n8fd.onrender.com/api/cart/view", {
           headers: { Authorization: `Bearer ${user.token}` },
         })
         .then((res) => setCartItems(res.data.data.items || []))
@@ -58,7 +58,7 @@ const Home = () => {
 
     axios
       .post(
-        "http://localhost:5000/api/cart/add",
+        "https://fsd-backend-project-1-n8fd.onrender.com/api/cart/add",
         { productId, quantity: 1 },
         {
           headers: { Authorization: `Bearer ${user.token}` },
@@ -74,7 +74,7 @@ const Home = () => {
   const removeFromCart = (productId) => {
     axios
       .delete(
-        `http://localhost:5000/api/cart/remove/${productId}`,
+        `https://fsd-backend-project-1-n8fd.onrender.com/api/cart/remove/${productId}`,
         {
           headers: { Authorization: `Bearer ${user.token}` },
         }
