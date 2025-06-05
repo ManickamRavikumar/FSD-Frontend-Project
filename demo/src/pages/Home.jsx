@@ -105,7 +105,7 @@ const Home = () => {
             {products.map((product) => {
              
               var trimmedData = product.name.replace(/ /g, '')
-              console.log("Product name ", trimmedData);
+              // console.log("Product name ", trimmedData);
               const inCart = cartItems.some(
                 (item) => item.product._id === product._id
               );
