@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Menu from "../components/Menu";
 import MobileApp from "../components/MobileApp";
 import Footer from "../components/Footer";
@@ -88,7 +88,7 @@ const Home = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] px-6 py-10">
-        <Header/>
+        {/* <Header/> */}
         <Menu />
         <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-10">
           Explore Our <span className="text-blue-600">Foods</span>
