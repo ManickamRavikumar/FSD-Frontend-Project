@@ -18,7 +18,7 @@ const Order = () => {
     }
 
     axios
-      .get("https://fsd-backend-project-1-n8fd.onrender.com/api/orders/my-orders", {
+      .get("https://fsd-backend-project-1-21sl.onrender.com/api/orders/my-orders", {
         headers: { Authorization: `Bearer ${user.token}` },
       })
       .then((res) => {
@@ -50,7 +50,7 @@ const Order = () => {
 
     axios
       .post(
-        "https://fsd-backend-project-1-n8fd.onrender.com/api/payment/checkout",
+        "https://fsd-backend-project-1-21sl.onrender.com/api/payment/checkout",
         { items: allItems, amount: totalAmount },
         {
           headers: { Authorization: `Bearer ${user.token}` },
